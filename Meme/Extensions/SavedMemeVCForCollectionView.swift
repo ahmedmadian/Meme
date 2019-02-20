@@ -23,5 +23,7 @@ extension SavedMemesCollectionVC : UICollectionViewDataSource, UICollectionViewD
         return SentMemsCollectionViewCell()
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "MemeDetailSegue", sender: indexPath.row)
+    }
 }

@@ -36,6 +36,13 @@ class SavedMememsTableVC: UIViewController {
     @IBAction func addButton_tapped(_ sender: UIBarButtonItem) {
        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? MemeDetailVC {
+            let row = sender as! Int
+            destinationVC.meme = memesList[row]
+        }
+    }
 
 }
 

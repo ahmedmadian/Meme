@@ -20,4 +20,8 @@ extension SavedMememsTableVC : UITableViewDataSource, UITableViewDelegate {
         }
         return SentMemsTableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "MemeDetailSegue", sender: indexPath.row)
+    }
 }

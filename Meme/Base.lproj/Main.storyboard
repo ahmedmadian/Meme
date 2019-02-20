@@ -172,6 +172,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="SentMemesTableView" destination="q3b-h7-pNn" id="Ohg-vD-W0u"/>
+                        <segue destination="J4K-xq-c9o" kind="show" identifier="MemeDetailSegue" id="93r-il-MfB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gnd-My-68R" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -239,11 +240,44 @@
                     </navigationItem>
                     <connections>
                         <outlet property="SentMemsCollectionView" destination="K3P-Yk-TWU" id="3P5-vs-Krb"/>
+                        <segue destination="J4K-xq-c9o" kind="show" identifier="MemeDetailSegue" id="a97-sw-Kq8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Owt-wC-G5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2391.1999999999998" y="109.29535232383809"/>
+        </scene>
+        <!--Meme DetailVC-->
+        <scene sceneID="EdE-gl-lhB">
+            <objects>
+                <viewController id="J4K-xq-c9o" customClass="MemeDetailVC" customModule="Meme" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wfp-nU-U7y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="242-FB-CN7">
+                                <rect key="frame" x="0.0" y="183.5" width="375" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="WFX-yV-Oad"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PBU-TR-uqN" firstAttribute="trailing" secondItem="242-FB-CN7" secondAttribute="trailing" id="Sgp-79-bZ1"/>
+                            <constraint firstItem="242-FB-CN7" firstAttribute="centerY" secondItem="wfp-nU-U7y" secondAttribute="centerY" id="gc6-xc-jzb"/>
+                            <constraint firstItem="242-FB-CN7" firstAttribute="leading" secondItem="PBU-TR-uqN" secondAttribute="leading" id="mxf-Ut-Rqp"/>
+                            <constraint firstItem="242-FB-CN7" firstAttribute="centerX" secondItem="wfp-nU-U7y" secondAttribute="centerX" id="tvc-iE-qI5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PBU-TR-uqN"/>
+                    </view>
+                    <connections>
+                        <outlet property="MemeDetailImageView" destination="242-FB-CN7" id="Orb-nB-eEI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MVz-nP-ip7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1198" y="143"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="oQt-97-qQo">
@@ -307,6 +341,7 @@
         <image name="table_30x30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AXW-wM-s6V"/>
+        <segue reference="a97-sw-Kq8"/>
+        <segue reference="1iA-DL-AMu"/>
     </inferredMetricsTieBreakers>
 </document>
